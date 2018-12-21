@@ -1,18 +1,20 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation'
-import LaunchScreen from '../Containers/LaunchScreen'
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import LaunchScreen from "../Containers/LaunchScreen";
+import CardScreen from "../Containers/CardScreen";
+import { Colors } from "../Themes";
 
-import styles from './Styles/NavigationStyles'
+import styles from "./Styles/NavigationStyles";
 
-// Manifest of possible screens
 const PrimaryNav = createStackNavigator({
-  LaunchScreen: { screen: LaunchScreen }
+	LaunchScreen: { screen: LaunchScreen },
+	CardScreen: { screen: CardScreen }
 }, {
-  // Default config for all screens
-  headerMode: 'none',
-  initialRouteName: 'LaunchScreen',
-  navigationOptions: {
-    headerStyle: styles.header
-  }
-})
+	headerMode: "float",
+	initialRouteName: "CardScreen",
+	defaultNavigationOptions: {
+		headerStyle: styles.header,
+		headerTintColor: Colors.snow
+  	}
+});
 
-export default createAppContainer(PrimaryNav)
+export default createAppContainer(PrimaryNav);

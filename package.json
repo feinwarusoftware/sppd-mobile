@@ -1,5 +1,5 @@
 {
-  "name": "sppd",
+  "name": "sppd-mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -82,5 +82,10 @@
     ],
     "preset": "react-native"
   },
-  "config": {}
+  "config": {},
+  "rnpm": {
+    "assets": [
+      "./App/Fonts/"
+    ]
+  }
 }
