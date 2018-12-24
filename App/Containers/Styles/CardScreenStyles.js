@@ -4,7 +4,7 @@ import { Metrics, ApplicationStyles } from "../../Themes";
 export default StyleSheet.create({
     ...ApplicationStyles.screen,
     container: {
-        marginTop: -100,
+        marginTop: -140,
         marginLeft: 10,
         marginRight: 10
     },

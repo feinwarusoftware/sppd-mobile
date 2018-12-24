@@ -25,7 +25,7 @@ class UpgradePicker extends Component {
 
                 pickerItems.push(
                     <Picker.Item key={key} label={`Upgrade ${upgrade}/70`} value={`u${upgrade}`}/>
-                );                                                                
+                );
             }                        
 
             pickerItems.push(
@@ -58,7 +58,7 @@ export default class CardScreen extends Component {
         return (
             <View style={styles.mainContainer}>
                 <ScrollView style={styles.container}>
-                    <View style={{marginBottom: -100}}>
+                    <View style={{marginBottom: -140}}>
                         <Image source={Images.awesomoCardRender} style={styles.cardImg}/>
                     </View>
                     <View>

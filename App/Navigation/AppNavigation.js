@@ -1,19 +1,19 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import LaunchScreen from "../Containers/LaunchScreen";
+import ListScreen from "../Containers/ListScreen";
 import CardScreen from "../Containers/CardScreen";
 import { Colors } from "../Themes";
 
-import styles from "./Styles/NavigationStyles";
-
 const PrimaryNav = createStackNavigator({
-	LaunchScreen: { screen: LaunchScreen },
+	ListScreen: { screen: ListScreen },
 	CardScreen: { screen: CardScreen }
 }, {
 	headerMode: "float",
-	initialRouteName: "CardScreen",
+	initialRouteName: "ListScreen",
 	defaultNavigationOptions: {
-		headerStyle: styles.header,
-		headerTintColor: Colors.snow
+		headerStyle: {
+      backgroundColor: "#ff594f"
+    },
+		headerTintColor: Colors.white
   	}
 });
 

@@ -20,9 +20,7 @@ const images = {
   hamburger: require('../Images/Icons/hamburger.png'),
   backButton: require('../Images/Icons/back-button.png'),
   closeButton: require('../Images/Icons/close-button.png'),
-
-  awesomoCard: require("../Images/Cards/CartmanSciCard.jpg"),
-  awesomoCardRender: require("../Images/Cards/CartmanSciCardRender.png")
+  awesomoCardRender: require('../Images/Cards/CartmanSciCardRender.png')
 }
 
 export default images

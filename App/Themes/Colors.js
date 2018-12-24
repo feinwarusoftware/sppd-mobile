@@ -1,5 +1,5 @@
 const colors = {
-  background: '#eeeeee',
+  background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',
@@ -14,7 +14,7 @@ const colors = {
   charcoal: '#595959',
   coal: '#2d2d2d',
   bloodOrange: '#fb5f26',
-  snow: 'white',
+  white: 'white',
   ember: 'rgba(164, 0, 48, 0.5)',
   fire: '#e73536',
   drawer: 'rgba(30, 30, 29, 0.95)',

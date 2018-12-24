@@ -1,4 +1,4 @@
-package com.sppd;
+package com.feinwaru.sppdmobile;
 
 import android.app.Application;
 
