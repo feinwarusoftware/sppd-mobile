@@ -58,3 +58,6 @@ buck-out/
 # Misc
 #
 .env
+
+# release apk signing credentials
+android/gradle.properties
