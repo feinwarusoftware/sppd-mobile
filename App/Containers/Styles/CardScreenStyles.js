@@ -4,13 +4,13 @@ import { Metrics, ApplicationStyles } from "../../Themes";
 export default StyleSheet.create({
     ...ApplicationStyles.screen,
     container: {
-        marginTop: -140,
+        marginTop: 0,
         marginLeft: 10,
         marginRight: 10
     },
     cardImg: {
         width: Metrics.screenWidth - 20,
-        resizeMode: "contain",
+        height: (Metrics.screenWidth * 1.46) - 20
     },
     headDetails: {
         fontFamily: "Roboto",
@@ -28,6 +28,9 @@ export default StyleSheet.create({
     },
     energy: {
         color: "#03a9f4"
+    },
+    energySvg: {
+        backgroundColor: "#03a9f4"
     },
     health: {
         color: "#f44336"

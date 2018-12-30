@@ -6,7 +6,11 @@ import rootSaga from '../Sagas/'
 export const reducers = combineReducers({
   nav: require('./NavigationRedux').reducer,
   github: require('./GithubRedux').reducer,
-  search: require('./SearchRedux').reducer
+  search: require('./SearchRedux').reducer,
+
+  // <!-- daddydragon's secret sauce -->
+  // card screen reducer
+  card: require("./CardScreenRedux")
 })
 
 export default () => {

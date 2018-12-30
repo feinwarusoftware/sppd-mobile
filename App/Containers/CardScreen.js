@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { View, Image, ScrollView, Text, Picker } from "react-native";
+import { connect } from "react-redux";
+import { View, Image, ScrollView, Text, Picker, PickerItem } from "react-native";
 import { Images } from "../Themes";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 // Styles
 import styles from "./Styles/CardScreenStyles";
@@ -24,12 +26,12 @@ class UpgradePicker extends Component {
                 const upgrade = this.kUpgradeSequence.slice(0, i).reduce((a, b) => a + b, 0) + (j + 1);
 
                 pickerItems.push(
-                    <Picker.Item key={key} label={`Upgrade ${upgrade}/70`} value={`u${upgrade}`}/>
+                    <PickerItem key={key} label={`Upgrade ${upgrade}/70`} value={`u${upgrade}`}/>
                 );
-            }                        
+            }
 
             pickerItems.push(
-                <Picker.Item key={key} label={`Level ${level}`} value={`l${level}`}/>
+                <PickerItem key={key} label={`Level ${level}`} value={`l${level}`}/>
             );
         }
 
@@ -58,8 +60,8 @@ export default class CardScreen extends Component {
         return (
             <View style={styles.mainContainer}>
                 <ScrollView style={styles.container}>
-                    <View style={{marginBottom: -140}}>
-                        <Image source={Images.awesomoCardRender} style={styles.cardImg}/>
+                    <View>
+                        { /*<Image source={Images.awesomoCardRender} style={styles.cardImg}/> */ }
                     </View>
                     <View>
 
@@ -67,8 +69,12 @@ export default class CardScreen extends Component {
                         <Text style={styles.headDetails}>
                             Epic | Tank
                         </Text>
+                        
                         <Text style={styles.quickStats}>
-                            <Text style={styles.energy}>5</Text> | <Text style={styles.health}>684</Text> | <Text style={styles.damage}>21</Text>
+                            <Text style={styles.energy}>
+                            <Icon name="bolt" size={25} /> 5</Text> | <Text style={styles.health}>
+                            <Icon name="heart" size={25} /> 684</Text> | <Text style={styles.damage}>
+                            <Icon name="shield" size={25} /> 21</Text>
                         </Text>
                         <Text style={styles.blurb}>
                             Charged: Freezes nearby enemies for 4 seconds seconds with a cosmic stomp.
@@ -90,7 +96,7 @@ export default class CardScreen extends Component {
                         <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Time To Reach Max Velocity:</Text> 0.1 seconds</Text>  
                         <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Agro Range Multiplier:</Text> 4.76x</Text>  
                         <Text style={styles.sectionHeading}>
-                            Can Attack? <Text style={{color: "#4caf50"}}>✓</Text>
+                            Can Attack? <Text style={{color: "#4caf50"}}>✓</Text><Text style={{color: "#f44336"}}>✖</Text>
                         </Text>
                         <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Attack Range:</Text> 0.525</Text>
                         <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Pre-Attack Delay:</Text> 0</Text>  
@@ -98,8 +104,12 @@ export default class CardScreen extends Component {
                         <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Time In Between Attacks:</Text> 0.5</Text>  
                         
                         <Text style={styles.sectionHeading}>
-                            AOE Attacks? <Text style={{color: "#f44336"}}>✖</Text>
+                            AOE Attacks? <Text style={{color: "#4caf50"}}>On Target</Text>
                         </Text>
+                        <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Damage Percentage:</Text> 1%</Text>
+                        <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Knockback Percentage:</Text> 0.5%</Text>  
+                        <Text style={styles.stats}><Text style={{fontWeight: "900"}}>Radius:</Text> 0.85</Text>    
+
                         <Text style={styles.sectionHeading}>
                             Requirements
                         </Text>
